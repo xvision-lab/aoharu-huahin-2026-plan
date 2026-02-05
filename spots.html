@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, nocache">
+  <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex, max-snippet:0, max-image-preview:none, max-video-preview:0">
+  <meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+
+  <title>Hua Hin Spots｜AOHARU × TRIPS4SOCCER</title>
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --text:#e9eef7;
+      --muted:#95a0b5;
+      --line:rgba(255,255,255,.08);
+      --shadow:0 12px 30px rgba(0,0,0,.35);
+      --radius:18px;
+      --accent:#7fb3ff;
+      --good:#2bd576;
+      --warn:#f6c445;
+      --max:1120px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Hiragino Sans", "Noto Sans JP", "Yu Gothic", Arial, sans-serif;
+      background:
+        radial-gradient(1200px 700px at 10% -10%, rgba(127,179,255,.16), transparent 60%),
+        radial-gradient(900px 600px at 95% 0%, rgba(43,213,118,.10), transparent 55%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:22px 16px 60px;}
+    header{
+      border-bottom:1px solid var(--line);
+      padding:10px 0 18px;
+      margin-bottom:16px;
+    }
+    .badges{display:flex; gap:8px; flex-wrap:wrap; align-items:center; color:var(--muted); font-size:13px;}
+    .badge{padding:6px 10px; border:1px solid var(--line); border-radius:999px; background:rgba(255,255,255,.06);}
+    h1{margin:10px 0 6px; font-size:26px; letter-spacing:.2px;}
+    .sub{margin:0; color:var(--muted); font-size:14px;}
+
+    .toolbar{display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-top:12px;}
+    .btn{
+      cursor:pointer;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.06);
+      color:var(--text);
+      padding:10px 12px;
+      font-size:13px;
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+    }
+    .btn:hover{background:rgba(255,255,255,.10);}
+    .btn.primary{border-color:rgba(127,179,255,.35); background:rgba(127,179,255,.12);}
+    .btn.primary:hover{background:rgba(127,179,255,.18);}
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+      margin-top:14px;
+    }
+    @media (max-width: 900px){
+      .grid{grid-template-columns:1fr;}
+    }
+
+    .card{
+      border:1px solid var(--line);
+      border-radius:22px;
+      background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+    .card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+      display:block;
+      filter:saturate(1.06) contrast(1.02);
+    }
+    .inner{padding:14px 14px 16px;}
+    .title{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:10px;
+      margin-bottom:6px;
+    }
+    .title h2{
+      margin:0;
+      font-size:16px;
+      letter-spacing:.2px;
+    }
+    .tag{
+      font-size:12px;
+      color:#cfe2ff;
+      border:1px solid rgba(127,179,255,.25);
+      background:rgba(127,179,255,.10);
+      padding:6px 10px;
+      border-radius:999px;
+      white-space:nowrap;
+    }
+    .desc{color:var(--muted); font-size:13px; margin:6px 0 10px;}
+    .meta{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:10px;
+    }
+    .box{
+      border:1px solid var(--line);
+      background:rgba(0,0,0,.18);
+      border-radius:14px;
+      padding:10px 12px;
+    }
+    .box .h{
+      font-weight:800;
+      font-size:12px;
+      letter-spacing:.2px;
+      margin-bottom:6px;
+      color:#dfe7f7;
+    }
+    .box ul{
+      margin:0;
+      padding-left:18px;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .box li{margin:4px 0;}
+    .hint{
+      margin-top:14px;
+      padding:12px;
+      border:1px dashed var(--line);
+      border-radius:14px;
+      background:rgba(0,0,0,.15);
+      color:var(--muted);
+      font-size:13px;
+    }
+    footer{
+      margin-top:18px;
+      border-top:1px solid var(--line);
+      padding-top:14px;
+      color:var(--muted);
+      font-size:12px;
+    }
+
+    @media print{
+      body{background:#fff; color:#000;}
+      .card{box-shadow:none;}
+      .btn{display:none;}
+      .desc,.hint,footer{color:#444;}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="badges">
+        <span class="badge">Hua Hin Spots</span>
+        <span class="badge">主催者検討用（写真付き）</span>
+      </div>
+      <h1>ホアヒン近郊スポット一覧（写真＋運営メモ）</h1>
+      <p class="sub">使い方：旅程設計の判断材料として、<b>「誰向け」「運営難易度」「失敗しにくさ」</b>で見比べる。</p>
+
+      <div class="toolbar">
+        <a class="btn primary" href="./index.html">← 旅程表に戻る（index.html）</a>
+      </div>
+
+      <div class="hint">
+        <b>写真について：</b>現在はイメージ共有を優先し、Unsplashの動的画像を使用。
+        固定画像にしたい場合は、各カードの <code>img src</code> を任意URLに差し替えるだけでOK。
+      </div>
+    </header>
+
+    <div class="grid">
+
+      <!-- Khao Takiab Beach -->
+      <article class="card">
+        <img alt="Khao Takiab Beach" src="https://source.unsplash.com/featured/1600x900/?hua-hin,khao-takiab,beach" />
+        <div class="inner">
+          <div class="title">
+            <h2>カオタキアップビーチ（Khao Takiab Beach）</h2>
+            <span class="tag">家族向け / 失敗しにくい</span>
+          </div>
+          <div class="desc">砂浜が広く、休憩ポイント（カフェ/店）を挟みやすい。短時間でも“来た感”が出る。</div>
+          <div class="meta">
+            <div class="box">
+              <div class="h">向いている層</div>
+              <ul>
+                <li>幼児連れ / 体力に差があるグループ</li>
+                <li>初ホアヒン勢（導入の一本目）</li>
+              </ul>
+            </div>
+            <div class="box">
+              <div class="h">運営メモ</div>
+              <ul>
+                <li>暑さ対策：滞在を短く／日陰導線を用意</li>
+                <li>“軽観光”として扱い、ハードにはしない</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Hua Hin Beach -->
+      <article class="card">
+        <img alt="Hua Hin Beach" src="https://source.unsplash.com/featured/1600x900/?hua-hin,beach,thailand" />
+        <div class="inner">
+          <div class="title">
+            <h2>ホアヒンビーチ（Hua Hin Beach）</h2>
+            <span class="tag">近い / 導線づくり</span>
+          </div>
+          <div class="desc">中心エリアから近く、ビーチ沿いの“散歩＋カフェ”で満足を作りやすい。</div>
+          <div class="meta">
+            <div class="box">
+              <div class="h">向いている層</div>
+              <ul>
+                <li>夕方の軽い散歩</li>
+                <li>買い物・食事の前後に組み込み</li>
+              </ul>
+            </div>
+            <div class="box">
+              <div class="h">運営メモ</div>
+              <ul>
+                <li>集合と解散がしやすい（迷いづらい）</li>
+                <li>“錨（集合できる場所）”にも使える</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Vana Nava -->
+      <article class="card">
+        <img alt="Vana Nava Water Jungle" src="https://source.unsplash.com/featured/1600x900/?waterpark,slides,thailand" />
+        <div class="inner">
+          <div class="title">
+            <h2>ヴァナナヴァ・ウォーターパーク（Vana Nava）</h2>
+            <span class="tag">子ども満足MAX / 体力消費</span>
+          </div>
+          <div class="desc">子ども満足度は最強。ただし体力・荷物・着替えで運営の手間が増える。</div>
+          <div class="meta">
+            <div class="box">
+              <div class="h">向いている層</div>
+              <ul>
+                <li>体力がある家族（希望者）</li>
+                <li>“一日しっかり遊ぶ”ニーズ</li>
+              </ul>
+            </div>
+            <div class="box">
+              <div class="h">運営メモ</div>
+              <ul>
+                <li>基本は「希望者のみ」で分岐（全体義務にしない）</li>
+                <li>翌日の活動に響く層は回避推奨</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Tamarind -->
+      <article class="card">
+        <img alt="Tamarind Market" src="https://source.unsplash.com/featured/1600x900/?night-market,thailand,street-food" />
+        <div class="inner">
+          <div class="title">
+            <h2>タマリンドマーケット（Tamarind Market）</h2>
+            <span class="tag">到着夜の最適解</span>
+          </div>
+          <div class="desc">到着夜に“説明しすぎず”歓迎できる場所。食べて満足→寝る、が成立。</div>
+          <div class="meta">
+            <div class="box">
+              <div class="h">向いている層</div>
+              <ul>
+                <li>到着初日（夜）</li>
+                <li>全員の“安心感づくり”</li>
+              </ul>
+            </div>
+            <div class="box">
+              <div class="h">運営メモ</div>
+              <ul>
+                <li>オリエンは5分で止める（長説明禁止）</li>
+                <li>集合の目印（入口/看板/ランドマーク）を事前に共有</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Cicada -->
+      <article class="card">
+        <img alt="Cicada Market" src="https://source.unsplash.com/featured/1600x900/?market,lights,thailand" />
+        <div class="inner">
+          <div class="title">
+            <h2>シカダマーケット（Cicada Market）</h2>
+            <span class="tag">週末 / 雰囲気強い</span>
+          </div>
+          <div class="desc">週末の雰囲気づくりに強い。混雑しやすいので“時間短め”で設計が安全。</div>
+          <div class="meta">
+            <div class="box">
+              <div class="h">向いている層</div>
+              <ul>
+                <li>夕方〜夜の“雰囲気体験”</li>
+                <li>買い物も少し楽しみたい人</li>
+              </ul>
+            </div>
+            <div class="box">
+              <div class="h">運営メモ</div>
+              <ul>
+                <li>迷子対策：集合ポイントを固定</li>
+                <li>ベビーカー/幼児は混雑時間帯を避ける</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Night Market -->
+      <article class="card">
+        <img alt="Hua Hin Night Market" src="https://source.unsplash.com/featured/1600x900/?street-food,night,thailand" />
+        <div class="inner">
+          <div class="title">
+            <h2>ナイトマーケット（Hua Hin Night Market）</h2>
+            <span class="tag">毎晩 / 小分け合流</span>
+          </div>
+          <div class="desc">毎晩行ける“受け皿”。全員集合ではなく、自然合流の場として使うと強い。</div>
+          <div class="meta">
+            <div class="box">
+              <div class="h">向いている層</div>
+              <ul>
+                <li>夕食を“各自＋軽く合流”にしたい日</li>
+                <li>買い物や食べ歩きをしたい人</li>
+              </ul>
+            </div>
+            <div class="box">
+              <div class="h">運営メモ</div>
+              <ul>
+                <li>“集合したい人の集合場所”として案内（任意）</li>
+                <li>時間を決めすぎない（自由度の担保）</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Market Village -->
+      <article class="card">
+        <img alt="Market Village Hua Hin" src="https://source.unsplash.com/featured/1600x900/?shopping-mall,thailand" />
+        <div class="inner">
+          <div class="title">
+            <h2>マーケットヴィレッジ（Market Village）</h2>
+            <span class="tag">冷房/トイレ/迷いにくい</span>
+          </div>
+          <div class="desc">家族運営の“安全基地”。暑さ・体調・買い物をまとめて吸収できる。</div>
+          <div class="meta">
+            <div class="box">
+              <div class="h">向いている層</div>
+              <ul>
+                <li>幼児連れ / 暑さが苦手</li>
+                <li>8/14午後A、8/18の買い物導線</li>
+              </ul>
+            </div>
+            <div class="box">
+              <div class="h">運営メモ</div>
+              <ul>
+                <li>“錨（集合場所）”設定に最適</li>
+                <li>迷子・体調不良の回収がしやすい</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Bluport -->
+      <article class="card">
+        <img alt="Bluport Hua Hin" src="https://source.unsplash.com/featured/1600x900/?resort-mall,thailand" />
+        <div class="inner">
+          <div class="title">
+            <h2>ブルーポート（BLÚPORT）</h2>
+            <span class="tag">家族の受け皿 / 短時間でも成立</span>
+          </div>
+          <div class="desc">“暑さ回避＋快適”を担保する大型モール。短時間でも満足が作れる。</div>
+          <div class="meta">
+            <div class="box">
+              <div class="h">向いている層</div>
+              <ul>
+                <li>サッカー中の残留組（買い物・休憩）</li>
+                <li>8/18の自由時間の受け皿</li>
+              </ul>
+            </div>
+            <div class="box">
+              <div class="h">運営メモ</div>
+              <ul>
+                <li>集合・解散が明確（運営コストが低い）</li>
+                <li>雨天時の代替にも使える</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Khao Hin Lek Fai -->
+      <article class="card">
+        <img alt="Khao Hin Lek Fai viewpoint" src="https://source.unsplash.com/featured/1600x900/?viewpoint,mountain,thailand" />
+        <div class="inner">
+          <div class="title">
+            <h2>カオヒンレックファイ（Khao Hin Lek Fai｜展望台）</h2>
+            <span class="tag">景色 / ただし温度差あり</span>
+          </div>
+          <div class="desc">景色は良いが、“登る/暑い/歩く”要素が入るので、全体向けには慎重に。</div>
+          <div class="meta">
+            <div class="box">
+              <div class="h">向いている層</div>
+              <ul>
+                <li>体力に余裕のある希望者</li>
+                <li>短時間で景色を取りにいきたい人</li>
+              </ul>
+            </div>
+            <div class="box">
+              <div class="h">運営メモ</div>
+              <ul>
+                <li>“全員必須”にはしない（満足度が割れる）</li>
+                <li>朝か夕方寄りの時間帯が安全（暑さ回避）</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Elephant Village (placeholder photo) -->
+      <article class="card">
+        <img alt="Elephant village" src="https://source.unsplash.com/featured/1600x900/?elephant,thailand" />
+        <div class="inner">
+          <div class="title">
+            <h2>エレファントヴィレッジ（Elephant Village）</h2>
+            <span class="tag">好みが割れる / 判断必要</span>
+          </div>
+          <div class="desc">興味がある人には強いが、価値観・好みが割れやすい。主催側で扱い方を要相談。</div>
+          <div class="meta">
+            <div class="box">
+              <div class="h">向いている層</div>
+              <ul>
+                <li>動物が好きな家族（希望者）</li>
+                <li>“タイっぽさ”を求める人</li>
+              </ul>
+            </div>
+            <div class="box">
+              <div class="h">運営メモ</div>
+              <ul>
+                <li>公式メニュー化するなら、事前に内容を精査</li>
+                <li>今回は“候補リスト枠”で十分かも</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <footer>
+      <div>
+        次のステップ：spots.htmlの各カードに「想定所要時間」「おおよその費用感（レンジ）」「移動手段」を追記すると、主催者内の意思決定が一気に進みます。
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
