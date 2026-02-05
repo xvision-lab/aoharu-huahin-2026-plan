@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, nocache">
+  <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex, max-snippet:0, max-image-preview:none, max-video-preview:0">
+  <meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <title>AOHARU × TRIPS4SOCCER｜Hua Hin Itinerary (Ops Draft)</title>
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --card:#121824;
+      --text:#e9eef7;
+      --muted:#95a0b5;
+      --line:rgba(255,255,255,.08);
+      --shadow:0 12px 30px rgba(0,0,0,.35);
+      --radius:18px;
+      --accent:#7fb3ff;
+      --good:#2bd576;
+      --warn:#f6c445;
+      --bad:#ff5b6a;
+      --max:1120px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Hiragino Sans", "Noto Sans JP", "Yu Gothic", Arial, sans-serif;
+      background:
+        radial-gradient(1200px 700px at 10% -10%, rgba(127,179,255,.16), transparent 60%),
+        radial-gradient(900px 600px at 95% 0%, rgba(43,213,118,.10), transparent 55%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:22px 16px 60px;}
+    header{
+      border-bottom:1px solid var(--line);
+      padding:10px 0 18px;
+      margin-bottom:16px;
+    }
+    .badges{display:flex; gap:8px; flex-wrap:wrap; align-items:center; color:var(--muted); font-size:13px;}
+    .badge{padding:6px 10px; border:1px solid var(--line); border-radius:999px; background:rgba(255,255,255,.06);}
+    h1{margin:10px 0 6px; font-size:26px; letter-spacing:.2px;}
+    .sub{margin:0; color:var(--muted); font-size:14px;}
+
+    .hero{
+      margin-top:14px;
+      border:1px solid var(--line);
+      border-radius:22px;
+      overflow:hidden;
+      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      box-shadow:var(--shadow);
+    }
+    .hero .inner{padding:16px 16px 14px;}
+    .hero .title{font-weight:700; font-size:16px; margin:0 0 6px;}
+    .hero .desc{margin:0; color:var(--muted); font-size:13px;}
+    .hero img{display:block; width:100%; height:220px; object-fit:cover; filter:saturate(1.05) contrast(1.05);}
+
+    .grid{display:grid; grid-template-columns: 1.2fr .8fr; gap:14px; margin-top:14px;}
+    @media (max-width: 900px){
+      .grid{grid-template-columns:1fr;}
+      .hero img{height:190px;}
+    }
+
+    .card{
+      background:rgba(255,255,255,.04);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+    .card .hd{
+      padding:14px 14px 10px;
+      border-bottom:1px solid var(--line);
+      display:flex;
+      gap:10px;
+      justify-content:space-between;
+      align-items:flex-start;
+    }
+    .card .hd h2{margin:0; font-size:16px;}
+    .card .hd .muted{color:var(--muted); font-size:12px; margin-top:2px;}
+    .card .bd{padding:14px;}
+    .muted{color:var(--muted);}
+    .kpi{display:grid; grid-template-columns: 1fr 1fr; gap:10px; margin-top:10px;}
+    .kpi .box{padding:10px 12px; border:1px solid var(--line); border-radius:14px; background:rgba(255,255,255,.04);}
+    .kpi .box .lab{font-size:11px; color:var(--muted);}
+    .kpi .box .val{font-size:14px; font-weight:700; margin-top:3px;}
+    .kpi .box .val small{font-weight:600; color:var(--muted);}
+
+    .btnrow{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px;}
+    .btn{
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:rgba(127,179,255,.10);
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-size:13px;
+      font-weight:650;
+    }
+    .btn:hover{background:rgba(127,179,255,.16);}
+    .btn .ic{opacity:.9}
+
+    /* Itinerary */
+    .days{margin-top:14px;}
+    details{
+      border-top:1px solid var(--line);
+      padding:0;
+      background:transparent;
+    }
+    details:first-child{border-top:none;}
+    summary{
+      list-style:none;
+      cursor:pointer;
+      padding:14px 12px;
+      display:flex;
+      gap:12px;
+      align-items:center;
+      justify-content:space-between;
+    }
+    summary::-webkit-details-marker{display:none;}
+    .sum-left{display:flex; flex-direction:column; gap:4px; min-width:0;}
+    .sum-title{font-weight:800; letter-spacing:.2px;}
+    .sum-meta{color:var(--muted); font-size:12px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+    .pill{
+      display:inline-flex; align-items:center; gap:6px;
+      padding:4px 10px; border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.06);
+      font-size:12px;
+      width:max-content;
+    }
+    .dot{width:8px; height:8px; border-radius:99px;}
+    .p-good .dot{background:var(--good);}
+    .p-warn .dot{background:var(--warn);}
+    .p-bad .dot{background:var(--bad);}
+    .chev{color:var(--muted); font-size:12px;}
+    details[open] .chev{transform:rotate(180deg);}
+
+    .it-table{
+      width:100%;
+      border-collapse:separate;
+      border-spacing:0;
+      margin:0 0 14px;
+    }
+    .it-table thead th{
+      text-align:left;
+      font-size:12px;
+      color:var(--muted);
+      padding:10px 12px;
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+    }
+    .it-table tbody td{
+      padding:12px;
+      border-bottom:1px solid var(--line);
+      vertical-align:top;
+      font-size:13px;
+    }
+    .it-table tbody tr:last-child td{border-bottom:none;}
+    .col-time{width:130px; color:var(--muted);}
+    .col-main{width:44%;}
+    .col-notes{color:var(--muted);}
+    .row b{color:var(--text);}
+    .callout{
+      margin:12px 14px 14px;
+      padding:12px 12px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background:rgba(43,213,118,.08);
+      color:var(--text);
+      font-size:13px;
+    }
+    .callout .muted{color:rgba(233,238,247,.8)}
+    .warnbox{
+      margin:12px 14px 14px;
+      padding:12px 12px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background:rgba(246,196,69,.10);
+      color:var(--text);
+      font-size:13px;
+    }
+
+    .foot{
+      margin-top:18px;
+      padding-top:14px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:12px;
+    }
+
+    @media print{
+      body{background:#fff; color:#000;}
+      .card{background:#fff; border-color:#ddd;}
+      details{border-color:#ddd;}
+      .it-table thead th{background:#f6f6f6; color:#333; border-color:#ddd;}
+      .it-table tbody td{border-color:#ddd; color:#333;}
+      header{border-color:#ddd;}
+      .badges, .daybox, .panel, .hero{box-shadow:none;}
+      .badge, .pill{border-color:#ddd;}
+      .muted{color:#444;}
+      .btn{display:none;}
+      a{color:#000; text-decoration:none;}
+    }
+
+    /* === Day image trio === */
+    .day-images{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+      margin-top:16px;
+    }
+    .day-images img{
+      width:100%;
+      height:160px;
+      object-fit:cover;
+      border-radius:14px;
+    }
+    .day-images figure{margin:0;}
+    .day-images figcaption{
+      margin-top:6px;
+      font-size:12px;
+      color:var(--muted);
+      text-align:center;
+    }
+    @media (max-width: 860px){
+      .day-images{grid-template-columns:1fr;}
+      .day-images img{height:200px;}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="badges">
+        <span class="badge">Ops Draft</span>
+        <span class="badge">Hua Hin</span>
+        <span class="badge">AOHARU × TRIPS4SOCCER</span>
+        <span class="badge">Event: 8/15–16</span>
+        <span class="badge">Stay: 8/13–19（想定）</span>
+      </div>
+      <h1>AOHARU海外オフ会 × LEARN THE KEY OF JAPANESE FOOTBALL（Hua Hin）</h1>
+      <p class="sub">主催者向け：旅程（運営検討ポイント込み）／スポット詳細は <a class="btn" href="./spots.html"><span class="ic">🗺️</span>spots.html</a> を参照</p>
+
+      <div class="hero">
+        <img src="./assets/hero-huahin.jpg" alt="Hua Hin mood">
+        <div class="inner">
+          <p class="title">運営の基本設計（前提）</p>
+          <p class="desc">
+            到着日は判断力が落ちるため<b>観光・長説明はしない</b>。8/14で地理理解と安心感を入れ切り、8/15–16は主催側がサッカーに集中できる状態を作る。8/17はオフ会の象徴（船上パーティー）。8/18の“余白日”で疲労を抜き、帰国便（深夜）へ。
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <section class="card">
+        <div class="hd">
+          <div>
+            <h2>全体の運営ポイント（押さえるべき骨格）</h2>
+            <div class="muted">日本人グループは「自由行動」だと動けない前提で設計する</div>
+          </div>
+        </div>
+        <div class="bd">
+          <ul>
+            <li><b>8/13（到着夜）</b>：長説明禁止。食べて寝る。最小ルールのみ。</li>
+            <li><b>8/14（初日）</b>：全員で「土地勘」→ 午後は選択式分岐。ここで安心感を作る。</li>
+            <li><b>8/15–16（サッカー）</b>：コーチ陣固定。家族側は「公式メニュー」で迷わせない。</li>
+            <li><b>8/17（オフ会本番）</b>：船上パーティーを象徴イベントとして配置（昼〜夜）。</li>
+            <li><b>8/18（余白日）</b>：完全分岐。疲労を抜く日（超重要）。</li>
+            <li><b>8/19（深夜便）</b>：夕方までホアヒン滞在可。買い物・海などで“締め”を設計。</li>
+          </ul>
+
+          <div class="kpi">
+            <div class="box">
+              <div class="lab">移動</div>
+              <div class="val">BKK → Hua Hin <small>約3時間</small></div>
+            </div>
+            <div class="box">
+              <div class="lab">サッカークリニック</div>
+              <div class="val">8/15–16 <small>土日2日</small></div>
+            </div>
+          </div>
+
+          <div class="btnrow">
+            <a class="btn" href="./spots.html"><span class="ic">🗺️</span>spots.html（スポット詳細）</a>
+          </div>
+        </div>
+      </section>
+
+      <aside class="card">
+        <div class="hd">
+          <div>
+            <h2>運営メモ（要検討）</h2>
+            <div class="muted">主催者間で決めておくと当日の迷いが減る</div>
+          </div>
+        </div>
+        <div class="bd">
+          <ul>
+            <li>空港到着〜両替・SIM購入の<b>集合ルール</b>（何分見るか）</li>
+            <li>チャーターワゴンの台数と荷物（ベビーカー等）</li>
+            <li>8/15–16 の家族メニュー：送迎・集合時間・現地ガイド役</li>
+            <li>船上パーティーの<b>船種</b>（人数・日陰・トイレ）／雨天代替案</li>
+            <li>8/18 の分岐：A/B/C それぞれの最小案内（集合地点だけ）</li>
+            <li>最終日の買い物：モール or ナイトマーケットの再訪</li>
+          </ul>
+          <div class="warnbox">
+            <b>注意：</b>本資料は「運営側の叩き台」。参加者配布版は表現を柔らかくし、選択肢を増やしすぎない。
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <section class="card days" style="margin-top:14px;">
+      <div class="hd">
+        <div>
+          <h2>日別 旅程（クリックで開く）</h2>
+          <div class="muted">各日末尾に「3枚のイメージ写真」を配置（直感で理解するため）</div>
+        </div>
+      </div>
+
+      <div class="bd" style="padding:0;">
+        <!-- 8/13 -->
+        <details open>
+          <summary>
+            <div class="sum-left">
+              <span class="pill p-good"><span class="dot"></span>必須</span>
+              <span class="sum-title">8/13（木）｜移動日（夜着）</span>
+              <span class="sum-meta">BKK（スワンナプーム）→ ホアヒン（約3h）</span>
+            </div>
+            <span class="chev">▼</span>
+          </summary>
+
+          <table class="it-table">
+            <thead><tr><th>時間目安</th><th>内容</th><th>運営ポイント</th></tr></thead>
+            <tbody>
+              <tr class="row">
+                <td class="col-time">夕方〜夜</td>
+                <td class="col-main">空港到着／両替
