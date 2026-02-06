@@ -45,6 +45,7 @@
     .sub{margin:0; color:var(--muted); font-size:14px;}
 
     .toolbar{display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-top:12px;}
+    /*
     .btn{
       cursor:pointer;
       border-radius:12px;
@@ -58,8 +59,24 @@
       align-items:center;
     }
     .btn:hover{background:rgba(255,255,255,.10);}
-    .btn.primary{border-color:rgba(127,179,255,.35); background:rgba(235,200,0,.40);}
-    .btn.primary:hover{background:rgba(127,179,255,.18);}
+    */
+    
+    .btn{
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:rgba(255,200,0,.40);
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-size:13px;
+      font-weight:650;
+      cursor:pointer;
+    }
+    .btn:hover{
+      background:rgba(255,200,0,.55);
+    }
+
 
     .grid{
       display:grid;
@@ -170,7 +187,7 @@
       <p class="sub">使い方：旅程設計の判断材料として、<b>「誰向け」「運営難易度」「失敗しにくさ」</b>で見比べる。</p>
 
       <div class="toolbar">
-        <a class="btn primary" href="./index.html">← 旅程表に戻る（index.html）</a>
+        <a class="btn" href="./index.html">← 旅程表に戻る（index.html）</a>
       </div>
 
       <div class="hint">
